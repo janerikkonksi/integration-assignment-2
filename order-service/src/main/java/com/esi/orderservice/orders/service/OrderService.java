@@ -48,6 +48,13 @@ public class OrderService {
         return order.map(this::mapToOrderDTO);
     }
 
+    public List<OrderDto> getOrdersByCustomerId(Long customerId) {
+        List<Order> orders = orderRepository.findByCustomerId(customerId);
+        return orders.stream()
+                .map(this::mapToOrderDTO)
+                .toList();
+    }
+
     public void addOrder(OrderDto orderDto) {
         Order order = Order.builder()
                 .id(orderDto.getId())

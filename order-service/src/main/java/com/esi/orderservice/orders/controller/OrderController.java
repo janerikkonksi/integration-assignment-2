@@ -29,12 +29,15 @@ public class OrderController {
         return orderService.getAllOrders();
     }
 
-
     @GetMapping("/orders/{id}")
     public Optional<OrderDto> getorder(@PathVariable String id) {
         return orderService.getOrder(id);
     }
 
+    @GetMapping("/customer/{customerId}")
+    public List<OrderDto> getOrdersByCustomerId(@PathVariable Long customerId) {
+        return orderService.getOrdersByCustomerId(customerId);
+    }
 
     @PostMapping("/orders")
     public void addorder(@RequestBody OrderDto orderDto) {
