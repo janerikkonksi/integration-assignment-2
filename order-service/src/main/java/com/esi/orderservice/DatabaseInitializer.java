@@ -1,4 +1,4 @@
-package com.esi.productservice;
+package com.esi.orderservice;
 
 
 import org.springframework.context.annotation.Configuration;

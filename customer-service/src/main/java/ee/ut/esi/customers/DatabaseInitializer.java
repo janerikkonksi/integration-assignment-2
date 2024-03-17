@@ -8,8 +8,8 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 public class DatabaseInitializer {
     public static void initialize(String databaseName) {
         String url = "jdbc:postgresql://localhost:5432/";
-        String username = "postgres";
-        String password = "postgres";
+        String username = "janerik";
+        String password = "12345678";
 
         var dataSource = new DriverManagerDataSource(url, username, password);
         var jdbcTemplate = new JdbcTemplate(dataSource);

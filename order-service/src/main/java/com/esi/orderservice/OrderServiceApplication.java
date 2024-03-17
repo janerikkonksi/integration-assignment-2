@@ -1,4 +1,4 @@
-package com.esi.productservice;
+package com.esi.orderservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @SpringBootApplication
-public class ProductServiceApplication {
+public class OrderServiceApplication {
 
 // A Bean is an object that we can inject in any class and  stored in an IoC (Inversion of Control) container which is often referred as Application Context.
 // Using the IoC principle, Spring collects bean instances from our application and uses them at the appropriate time.
@@ -20,8 +20,8 @@ public class ProductServiceApplication {
 	}
 
 	public static void main(String[] args) {
-		DatabaseInitializer.initialize("productservice_db");
-		SpringApplication.run(ProductServiceApplication.class, args);
+		DatabaseInitializer.initialize("orderservice_db");
+		SpringApplication.run(OrderServiceApplication.class, args);
 	}
 
 }
