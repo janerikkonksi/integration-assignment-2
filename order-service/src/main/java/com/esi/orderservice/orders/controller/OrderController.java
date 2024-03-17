@@ -34,7 +34,7 @@ public class OrderController {
         return orderService.getOrder(id);
     }
 
-    @GetMapping("/customer/{customerId}")
+    @GetMapping("/customer-orders/{customerId}")
     public List<OrderDto> getOrdersByCustomerId(@PathVariable Long customerId) {
         return orderService.getOrdersByCustomerId(customerId);
     }

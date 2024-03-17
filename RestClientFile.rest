@@ -33,3 +33,48 @@ Content-Type: application/json
 DELETE http://localhost:8082/api/customers/1
 
 
+
+### Get All orders
+GET http://localhost:8083/api/orders
+
+
+### Get an order by ID
+GET http://localhost:8083/api/orders/1
+
+
+### Add an order
+POST http://localhost:8083/api/orders
+Content-Type: application/json
+
+{
+  "id": 1,
+  "customerId": 1,
+  "orderDate": "2024-03-17T17:24:08.524Z",
+  "totalAmount": 50,
+  "status": "PROCESSED",
+  "shippingAddress": "Tartu, Estonia",
+  "billingAddress": "Tartu, Estonia",
+  "paymentMethod": "PAYPAL"
+}
+
+### Update an order
+PUT http://localhost:8083/api/orders/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "customerId": 1,
+  "orderDate": "2024-03-17T17:24:08.524Z",
+  "totalAmount": 50,
+  "status": "SHIPPED",
+  "shippingAddress": "Tartu, Estonia",
+  "billingAddress": "Tartu, Estonia",
+  "paymentMethod": "PAYPAL"
+}
+
+### Delete an order
+DELETE http://localhost:8083/api/orders/1
+
+
+### Get an order by customer's ID
+GET http://localhost:8083/api/customer-orders/1
